@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: action/checkout@v2
       - run: cd auth && docker build -t pedroherub/auth .
